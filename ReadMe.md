@@ -144,7 +144,7 @@ graph LR
     end
 
     subgraph P6["P6 · FrontendServer"]
-        F1["AshokLeylandFrontEnd<br/>(PyQt6 GUI)"]
+        F1["AutoCompanyFrontEnd<br/>(PyQt6 GUI)"]
         F2["ImageProcessingGUI"]
         F3["SimplePopups"]
     end
@@ -654,7 +654,7 @@ The compiled binary and all dependencies are placed in `MainProgram.dist/`. Copy
 │   └── PostgresBackupUtility.py
 │
 ├── frontend/                       # PyQt6 GUI
-│   ├── AshokLeylandFrontEnd.py
+│   ├── AutoCompanyFrontEnd.py
 │   ├── ImageProcessingGUI.py
 │   └── SimplePopups.py
 │

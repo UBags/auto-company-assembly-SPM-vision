@@ -764,7 +764,7 @@ def runComprehensiveTest():
     CAMERA_IP = "192.168.1.64"
     CAMERA_PORT = 80
     CAMERA_UID = "admin"
-    CAMERA_PWD = "Leyland9753"
+    CAMERA_PWD = "Auto9753"
     CAMERA_NAME = "Test Camera 1"
 
     # Test settings
@@ -1034,7 +1034,7 @@ def runQuickConnectionTest():
     CAMERA_IP = "192.168.1.64"
     CAMERA_PORT = 80
     CAMERA_UID = "admin"
-    CAMERA_PWD = "Leyland9753"
+    CAMERA_PWD = "Auto9753"
 
     print(f"\n[*] Connecting to {CAMERA_IP}...")
 
@@ -1101,7 +1101,7 @@ def runStressTest(duration_minutes=5):
     CAMERA_IP = "192.168.1.64"
     CAMERA_PORT = 80
     CAMERA_UID = "admin"
-    CAMERA_PWD = "Leyland9753"
+    CAMERA_PWD = "Auto9753"
 
     camera = RTSPCam(IP=CAMERA_IP, port=CAMERA_PORT, uid=CAMERA_UID, password=CAMERA_PWD, name="StressTest")
 
@@ -1162,7 +1162,7 @@ def runStressTest(duration_minutes=5):
 def testToSeeFrames():
     logBoth('logInfo', RTSPCam.logSource, "Starting", Logger.GENERAL)
     # camera = RTSPCam("192.168.1.100", 80, "admin", "abcd1234", "Camera 1")
-    camera = RTSPCam("192.168.1.64", 80, "admin", "Leyland9753", "Camera 1")
+    camera = RTSPCam("192.168.1.64", 80, "admin", "Auto9753", "Camera 1")
     logBoth('logInfo', RTSPCam.logSource, f"{camera}", Logger.GENERAL)
     startTime = time.time()
     repeats=100000

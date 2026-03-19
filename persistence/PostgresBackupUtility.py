@@ -571,7 +571,7 @@
 #
 # # if __name__ == '__main__':
 # #   doBackup()
-# #     doRestore("C:/Users/bagch/Downloads/backup-geltec_production-20241116-165100.sql.gz")
+# #     doRestore("C:/Users/bagch/Downloads/backup-xyz_production-20241116-165100.sql.gz")
 #
 
 """

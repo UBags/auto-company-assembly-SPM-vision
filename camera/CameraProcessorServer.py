@@ -138,7 +138,7 @@ class MonitorGetPicQueue(GenericQueueProcessor):
 #     def __init__(self):
 #         self.indexTable=[]
 #         self.currentIndex = 0
-#         self.basePath = "C:/PythonProjects/Geltec_New/Images/Right Disc All/"
+#         self.basePath = "C:/PythonProjects/New/Images/Right Disc All/"
 #         self.filesInDirectory = getAllFilesInDirectory(self.basePath)
 #         self.nFilesInDirectory = len(self.filesInDirectory)
 #
@@ -1082,7 +1082,7 @@ class ImageProcessor():
 # *******************************MonitorSendResultQueue start*******************************************
 
 # This is NOT NEEDED FOR Auto Company, because THERE IS NO NEED TO WAIT FOR A REDIS MESSAGE FROM IOSERVER
-# BEFORE SENDING THE RETURN RESULT TO THE IOSERVER. This was a need in GelTech, so this thread was needed.
+# BEFORE SENDING THE RETURN RESULT TO THE IOSERVER. This was a need in XYZ, so this thread was needed.
 
 # class MonitorSendResultQueue(GenericQueueProcessor):
 #
