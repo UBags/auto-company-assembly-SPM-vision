@@ -1,0 +1,77 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="48">
+            <item index="0" class="java.lang.String" itemvalue="httpx" />
+            <item index="1" class="java.lang.String" itemvalue="pillow-lut" />
+            <item index="2" class="java.lang.String" itemvalue="decorator" />
+            <item index="3" class="java.lang.String" itemvalue="async-timeout" />
+            <item index="4" class="java.lang.String" itemvalue="Babel" />
+            <item index="5" class="java.lang.String" itemvalue="chronometry" />
+            <item index="6" class="java.lang.String" itemvalue="setuptools" />
+            <item index="7" class="java.lang.String" itemvalue="silverware" />
+            <item index="8" class="java.lang.String" itemvalue="alabaster" />
+            <item index="9" class="java.lang.String" itemvalue="spacy" />
+            <item index="10" class="java.lang.String" itemvalue="docutils" />
+            <item index="11" class="java.lang.String" itemvalue="cchardet" />
+            <item index="12" class="java.lang.String" itemvalue="html-to-etree" />
+            <item index="13" class="java.lang.String" itemvalue="pyparsing" />
+            <item index="14" class="java.lang.String" itemvalue="torch-geometric" />
+            <item index="15" class="java.lang.String" itemvalue="beautifulsoup4" />
+            <item index="16" class="java.lang.String" itemvalue="SpeechRecognition" />
+            <item index="17" class="java.lang.String" itemvalue="torch-checker" />
+            <item index="18" class="java.lang.String" itemvalue="extract-msg" />
+            <item index="19" class="java.lang.String" itemvalue="IMAPClient" />
+            <item index="20" class="java.lang.String" itemvalue="six" />
+            <item index="21" class="java.lang.String" itemvalue="asyncpg" />
+            <item index="22" class="java.lang.String" itemvalue="beartype" />
+            <item index="23" class="java.lang.String" itemvalue="argcomplete" />
+            <item index="24" class="java.lang.String" itemvalue="h5py" />
+            <item index="25" class="java.lang.String" itemvalue="extract-social-media" />
+            <item index="26" class="java.lang.String" itemvalue="pdftotree" />
+            <item index="27" class="java.lang.String" itemvalue="attrs" />
+            <item index="28" class="java.lang.String" itemvalue="bcrypt" />
+            <item index="29" class="java.lang.String" itemvalue="ravenclaw" />
+            <item index="30" class="java.lang.String" itemvalue="chardet" />
+            <item index="31" class="java.lang.String" itemvalue="disk" />
+            <item index="32" class="java.lang.String" itemvalue="pdfminer.six" />
+            <item index="33" class="java.lang.String" itemvalue="draftjs-exporter" />
+            <item index="34" class="java.lang.String" itemvalue="pdf" />
+            <item index="35" class="java.lang.String" itemvalue="django-filter" />
+            <item index="36" class="java.lang.String" itemvalue="zlibrary" />
+            <item index="37" class="java.lang.String" itemvalue="django-taggit" />
+            <item index="38" class="java.lang.String" itemvalue="Fuzzy" />
+            <item index="39" class="java.lang.String" itemvalue="torch-discounted-cumsum" />
+            <item index="40" class="java.lang.String" itemvalue="pycocotools" />
+            <item index="41" class="java.lang.String" itemvalue="httpcore" />
+            <item index="42" class="java.lang.String" itemvalue="Pillow" />
+            <item index="43" class="java.lang.String" itemvalue="ffmpeg_python" />
+            <item index="44" class="java.lang.String" itemvalue="onvif2_zeep" />
+            <item index="45" class="java.lang.String" itemvalue="PyQt5_sip" />
+            <item index="46" class="java.lang.String" itemvalue="AppKit" />
+            <item index="47" class="java.lang.String" itemvalue="nvidia-pyindex" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E402" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N806" />
+          <option value="N802" />
+          <option value="N803" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

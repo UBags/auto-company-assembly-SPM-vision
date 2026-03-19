@@ -1,0 +1,534 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hub And Disc Data Query</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 20px; 
+            background-color: #f4f6f9; 
+        }
+        h1 { 
+            color: #2c3e50; 
+            text-align: center; 
+        }
+        .query-section { 
+            margin-bottom: 20px; 
+            padding: 15px; 
+            background-color: #ffffff; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+        }
+        h3 { 
+            color: #34495e; 
+            margin-bottom: 10px; 
+        }
+        button { 
+            padding: 10px 20px; 
+            margin: 5px; 
+            background-color: #3498db; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            transition: background-color 0.3s; 
+        }
+        button:hover { 
+            background-color: #2980b9; 
+        }
+        button:disabled { 
+            background-color: #bdc3c7; 
+            cursor: not-allowed; 
+        }
+        textarea { 
+            width: 100%; 
+            height: 200px; 
+            border: 1px solid #ddd; 
+            border-radius: 5px; 
+            padding: 10px; 
+            font-family: monospace; 
+        }
+        select, input[type="date"] { 
+            padding: 8px; 
+            margin: 5px; 
+            width: 200px; 
+            border: 1px solid #ddd; 
+            border-radius: 5px; 
+        }
+        label { 
+            margin-right: 10px; 
+            color: #34495e; 
+        }
+        .code-example { 
+            margin-top: 20px; 
+            padding: 15px; 
+            background-color: #ffffff; 
+            border: 1px solid #ddd; 
+            border-radius: 8px; 
+        }
+        pre { 
+            background-color: #2b2b2b; 
+            color: #f8f8f8; 
+            padding: 15px; 
+            border-radius: 5px; 
+            overflow-x: auto; 
+        }
+        h4 { 
+            margin-bottom: 10px; 
+            color: #34495e; 
+        }
+        #recordCount { 
+            margin-left: 20px; 
+            display: inline-block; 
+            color: #27ae60; 
+            font-weight: bold; 
+        }
+        .icon { 
+            margin-right: 8px; 
+        }
+        .payload { 
+            background-color: #e0e0e0; 
+            font-family: monospace; 
+            border: 1px solid #ccc; 
+            padding: 5px; 
+        }
+        /* New table-section styles */
+        .table-section {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        /* New table styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th.json {
+            background-color: #3498db;
+            color: white;
+        }
+        th.csv {
+            background-color: #27ae60;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #e6f3ff;
+        }
+        td.payload {
+            background-color: #e0e0e0;
+            font-family: monospace;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1><i class="fas fa-database icon"></i>Hub And Disc Data Query</h1>
+
+    <div class="query-section">
+        <h3><i class="fas fa-car icon"></i>Get Data by Model Name</h3>
+        <label for="modelName1">Model Name:</label>
+        <select id="modelName1">
+            <option value="">Select Model</option>
+            
+            <option value="Model 1">Model 1</option>
+            
+            <option value="Model 2">Model 2</option>
+            
+            <option value="Model 3">Model 3</option>
+            
+        </select>
+        <button id="by_model_name_csv_btn" onclick="validateAndQuery('by_model_name', 'csv', 'modelName1')"><i class="fas fa-file-csv icon"></i>Retrieve Records as CSV</button>
+        <button id="by_model_name_json_btn" onclick="validateAndQuery('by_model_name', 'json', 'modelName1')"><i class="fas fa-file-code icon"></i>Retrieve Records as JSON</button>
+    </div>
+
+    <div class="query-section">
+        <h3><i class="fas fa-car icon"></i>Get Data by Model Name and Date Limits</h3>
+        <label for="modelName2">Model Name:</label>
+        <select id="modelName2">
+            <option value="">Select Model</option>
+            
+            <option value="Model 1">Model 1</option>
+            
+            <option value="Model 2">Model 2</option>
+            
+            <option value="Model 3">Model 3</option>
+            
+        </select>
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate">
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate">
+        <button id="by_model_name_and_date_csv_btn" onclick="validateAndQuery('by_model_name_and_date', 'csv', 'modelName2')"><i class="fas fa-file-csv icon"></i>Retrieve Records as CSV</button>
+        <button id="by_model_name_and_date_json_btn" onclick="validateAndQuery('by_model_name_and_date', 'json', 'modelName2')"><i class="fas fa-file-code icon"></i>Retrieve Records as JSON</button>
+    </div>
+
+    <div class="query-section">
+        <h3><i class="fas fa-car icon"></i>Get Data of Today by Model Number</h3>
+        <label for="modelName3">Model Name:</label>
+        <select id="modelName3">
+            <option value="">Select Model</option>
+            
+            <option value="Model 1">Model 1</option>
+            
+            <option value="Model 2">Model 2</option>
+            
+            <option value="Model 3">Model 3</option>
+            
+        </select>
+        <button id="today_by_model_csv_btn" onclick="validateAndQuery('today_by_model', 'csv', 'modelName3')"><i class="fas fa-file-csv icon"></i>Retrieve Records as CSV</button>
+        <button id="today_by_model_json_btn" onclick="validateAndQuery('today_by_model', 'json', 'modelName3')"><i class="fas fa-file-code icon"></i>Retrieve Records as JSON</button>
+    </div>
+
+    <div class="query-section">
+        <h3><i class="fas fa-calendar-alt icon"></i>Get Data by Date Limits</h3>
+        <label for="startDate2">Start Date:</label>
+        <input type="date" id="startDate2">
+        <label for="endDate2">End Date:</label>
+        <input type="date" id="endDate2">
+        <button id="by_date_limits_csv_btn" onclick="validateAndQuery('by_date_limits', 'csv')"><i class="fas fa-file-csv icon"></i>Retrieve Records as CSV</button>
+        <button id="by_date_limits_json_btn" onclick="validateAndQuery('by_date_limits', 'json')"><i class="fas fa-file-code icon"></i>Retrieve Records as JSON</button>
+    </div>
+
+    <div class="query-section">
+        <h3><i class="fas fa-calendar-day icon"></i>Get All Data of Today</h3>
+        <button id="all_today_csv_btn" onclick="validateAndQuery('all_today', 'csv')"><i class="fas fa-file-csv icon"></i>Retrieve Records as CSV</button>
+        <button id="all_today_json_btn" onclick="validateAndQuery('all_today', 'json')"><i class="fas fa-file-code icon"></i>Retrieve Records as JSON</button>
+    </div>
+
+    <h3><i class="fas fa-table icon"></i>Result <span id="recordCount"></span></h3>
+    <textarea id="result" readonly></textarea>
+
+    <div class="code-example">
+        <h3><i class="fas fa-code icon"></i>API Usage Examples</h3>
+        <h4>Python (using requests)</h4>
+        <pre>
+import requests
+
+# Get data by model name (CSV)
+response = requests.post('http://localhost:8000/api/by_model_name/csv/', json={'modelName': 'Model 1'})
+if response.status_code == 200:
+    print(response.text)
+else:
+    print(f"Error: {response.text}")
+
+# Get data by model name and date limits (CSV)
+response = requests.post('http://localhost:8000/api/by_model_name_and_date/csv/', 
+                        json={'modelName': 'Model 1', 'startDate': '2025-06-01', 'endDate': '2025-06-29'})
+if response.status_code == 200:
+    print(response.text)
+else:
+    print(f"Error: {response.text}")
+
+# Get unique model names (JSON)
+response = requests.post('http://localhost:8000/api/get_unique_model_names/json/', json={})
+if response.status_code == 200:
+    print(response.json()['model_names'])
+else:
+    print(f"Error: {response.text}")
+
+# Get data by model name (JSON)
+response = requests.post('http://localhost:8000/api/by_model_name/json/', json={'modelName': 'Model 1'})
+if response.status_code == 200:
+    print(response.json()['data'])
+else:
+    print(f"Error: {response.text}")
+        </pre>
+
+        <h4>JavaScript (using fetch)</h4>
+        <pre>
+fetch('http://localhost:8000/api/by_model_name/csv/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ modelName: 'Model 1' })
+})
+.then(response => response.status === 200 ? response.text() : Promise.reject(response.text()))
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));
+
+fetch('http://localhost:8000/api/by_model_name_and_date/csv/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ modelName: 'Model 1', startDate: '2025-06-01', endDate: '2025-06-29' })
+})
+.then(response => response.status === 200 ? response.text() : Promise.reject(response.text()))
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));
+
+fetch('http://localhost:8000/api/get_unique_model_names/json/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({})
+})
+.then(response => response.status === 200 ? response.json() : Promise.reject(response.text()))
+.then(data => console.log(data.model_names))
+.catch(error => console.error('Error:', error));
+
+fetch('http://localhost:8000/api/by_model_name/json/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ modelName: 'Model 1' })
+})
+.then(response => response.status === 200 ? response.json() : Promise.reject(response.text()))
+.then(data => console.log(data.data))
+.catch(error => console.error('Error:', error));
+        </pre>
+
+        <h4>Java (using HttpClient)</h4>
+        <pre>
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.net.URI;
+import java.nio.charset.StandardCharsets;
+
+public class ApiClient {
+    public static void main(String[] args) throws Exception {
+        HttpClient client = HttpClient.newHttpClient();
+
+        // Get data by model name (CSV)
+        String json1 = "{"modelName": "Model 1"}";
+        HttpRequest request1 = HttpRequest.newBuilder()
+            .uri(URI.create("http://localhost:8000/api/by_model_name/csv/"))
+            .header("Content-Type", "application/json")
+            .POST(HttpRequest.BodyPublishers.ofString(json1))
+            .build();
+        HttpResponse<String> response1 = client.send(request1, HttpResponse.BodyHandlers.ofString());
+        if (response1.statusCode() == 200) {
+            System.out.println(response1.body());
+        } else {
+            System.out.println("Error: " + response1.body());
+        }
+
+        // Get data by model name and date limits (CSV)
+        String json2 = "{"modelName": "Model 1", "startDate": "2025-06-01", "endDate": "2025-06-29"}";
+        HttpRequest request2 = HttpRequest.newBuilder()
+            .uri(URI.create("http://localhost:8000/api/by_model_name_and_date/csv/"))
+            .header("Content-Type", "application/json")
+            .POST(HttpRequest.BodyPublishers.ofString(json2))
+            .build();
+        HttpResponse<String> response2 = client.send(request2, HttpResponse.BodyHandlers.ofString());
+        if (response2.statusCode() == 200) {
+            System.out.println(response2.body());
+        } else {
+            System.out.println("Error: " + response2.body());
+        }
+
+        // Get unique model names (JSON)
+        String json3 = "{}";
+        HttpRequest request3 = HttpRequest.newBuilder()
+            .uri(URI.create("http://localhost:8000/api/get_unique_model_names/json/"))
+            .header("Content-Type", "application/json")
+            .POST(HttpRequest.BodyPublishers.ofString(json3))
+            .build();
+        HttpResponse<String> response3 = client.send(request3, HttpResponse.BodyHandlers.ofString());
+        if (response3.statusCode() == 200) {
+            System.out.println(response3.body());
+        } else {
+            System.out.println("Error: " + response3.body());
+        }
+
+        // Get data by model name (JSON)
+        HttpRequest request4 = HttpRequest.newBuilder()
+            .uri(URI.create("http://localhost:8000/api/by_model_name/json/"))
+            .header("Content-Type", "application/json")
+            .POST(HttpRequest.BodyPublishers.ofString(json1))
+            .build();
+        HttpResponse<String> response4 = client.send(request4, HttpResponse.BodyHandlers.ofString());
+        if (response4.statusCode() == 200) {
+            System.out.println(response4.body());
+        } else {
+            System.out.println("Error: " + response4.body());
+        }
+    }
+}
+        </pre>
+
+        <h4>.NET (C# using HttpClient)</h4>
+        <pre>
+using System;
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
+
+class Program
+{
+    static async Task Main(string[] args)
+    {
+        using HttpClient client = new HttpClient();
+
+        // Get data by model name (CSV)
+        string json1 = "{"modelName": "Model 1"}";
+        var content1 = new StringContent(json1, Encoding.UTF8, "application/json");
+        HttpResponseMessage response1 = await client.PostAsync("http://localhost:8000/api/by_model_name/csv/", content1);
+        if (response1.StatusCode == System.Net.HttpStatusCode.OK)
+        {
+            string result1 = await response1.Content.ReadAsStringAsync();
+            Console.WriteLine(result1);
+        }
+        else
+        {
+            string error1 = await response1.Content.ReadAsStringAsync();
+            Console.WriteLine($"Error: {error1}");
+        }
+
+        // Get data by model name and date limits (CSV)
+        string json2 = "{"modelName": "Model 1", "startDate": "2025-06-01", "endDate": "2025-06-29"}";
+        var content2 = new StringContent(json2, Encoding.UTF8, "application/json");
+        HttpResponseMessage response2 = await client.PostAsync("http://localhost:8000/api/by_model_name_and_date/csv/", content2);
+        if (response2.StatusCode == System.Net.HttpStatusCode.OK)
+        {
+            string result2 = await response2.Content.ReadAsStringAsync();
+            Console.WriteLine(result2);
+        }
+        else
+        {
+            string error2 = await response2.Content.ReadAsStringAsync();
+            Console.WriteLine($"Error: {error2}");
+        }
+
+        // Get unique model names (JSON)
+        string json3 = "{}";
+        var content3 = new StringContent(json3, Encoding.UTF8, "application/json");
+        HttpResponseMessage response3 = await client.PostAsync("http://localhost:8000/api/get_unique_model_names/json/", content3);
+        if (response3.StatusCode == System.Net.HttpStatusCode.OK)
+        {
+            string result3 = await response3.Content.ReadAsStringAsync();
+            Console.WriteLine(result3);
+        }
+        else
+        {
+            string error3 = await response3.Content.ReadAsStringAsync();
+            Console.WriteLine($"Error: {error3}");
+        }
+
+        // Get data by model name (JSON)
+        var content4 = new StringContent(json1, Encoding.UTF8, "application/json");
+        HttpResponseMessage response4 = await client.PostAsync("http://localhost:8000/api/by_model_name/json/", content4);
+        if (response4.StatusCode == System.Net.HttpStatusCode.OK)
+        {
+            string result4 = await response4.Content.ReadAsStringAsync();
+            Console.WriteLine(result4);
+        }
+        else
+        {
+            string error4 = await response4.Content.ReadAsStringAsync();
+            Console.WriteLine($"Error: {error4}");
+        }
+    }
+}
+        </pre>
+
+        <h4>cURL</h4>
+        <pre>
+curl -X POST http://localhost:8000/api/by_model_name/csv/ -H "Content-Type: application/json" -d '{"modelName": "Model 1"}'
+
+curl -X POST http://localhost:8000/api/by_model_name_and_date/csv/ -H "Content-Type: application/json" -d '{"modelName": "Model 1", "startDate": "2025-06-01", "endDate": "2025-06-29"}'
+
+curl -X POST http://localhost:8000/api/get_unique_model_names/json/ -H "Content-Type: application/json" -d '{}' -o model_names.json
+
+curl -X POST http://localhost:8000/api/by_model_name/json/ -H "Content-Type: application/json" -d '{"modelName": "Model 1"}' -o data.json
+        </pre>
+    </div>
+
+    <script type="text/javascript">
+        console.log('Test script executed');
+    </script>
+    <script type="text/javascript" src="static/app.js">
+    </script>
+
+<div class="table-section">
+        <h2>API Endpoints for JSON Responses</h2>
+        <table>
+            <tr>
+                <th class="json">Method Name</th>
+                <th class="json">API Endpoint</th>
+                <th class="json">Expected Payload</th>
+            </tr>
+            <tr>
+                <td>getUniqueModelNames</td>
+                <td>http://192.168.1.100:8000/api/get_unique_model_names/json/</td>
+                <td class="payload">{}</td>
+            </tr>
+            <tr>
+                <td>getDataByModelName</td>
+                <td>http://192.168.1.100:8000/api/get_data_by_model_name/json/</td>
+                <td class="payload">{"model_name": "DOST"}</td>
+            </tr>
+            <tr>
+                <td>getDataByModelNameAndDateLimits</td>
+                <td>http://192.168.1.100:8000/api/get_data_by_model_name_and_date_limits/json/</td>
+                <td class="payload">{"model_name": "DOST", "start_date": "2025-06-01", "end_date": "2025-06-17"}</td>
+            </tr>
+            <tr>
+                <td>getDataOfTodayByModelNumber</td>
+                <td>http://192.168.1.100:8000/api/get_data_of_today_by_model_number/json/</td>
+                <td class="payload">{"model_name": "DOST"}</td>
+            </tr>
+            <tr>
+                <td>getDataByDateLimits</td>
+                <td>http://192.168.1.100:8000/api/get_data_by_date_limits/json/</td>
+                <td class="payload">{"start_date": "2025-06-01", "end_date": "2025-06-17"}</td>
+            </tr>
+            <tr>
+                <td>getAllDataOfToday</td>
+                <td>http://192.168.1.100:8000/api/get_all_data_of_today/json/</td>
+                <td class="payload">{}</td>
+            </tr>
+        </table>
+
+        <h2>API Endpoints for CSV Responses</h2>
+        <table>
+            <tr>
+                <th class="csv">Method Name</th>
+                <th class="csv">API Endpoint</th>
+                <th class="csv">Expected Payload</th>
+            </tr>
+            <tr>
+                <td>getUniqueModelNames</td>
+                <td>http://192.168.1.100:8000/api/get_unique_model_names/csv/</td>
+                <td class="payload">{}</td>
+            </tr>
+            <tr>
+                <td>getDataByModelName</td>
+                <td>http://192.168.1.100:8000/api/get_data_by_model_name/csv/</td>
+                <td class="payload">{"model_name": "DOST"}</td>
+            </tr>
+            <tr>
+                <td>getDataByModelNameAndDateLimits</td>
+                <td>http://192.168.1.100:8000/api/get_data_by_model_name_and_date_limits/csv/</td>
+                <td class="payload">{"model_name": "DOST", "start_date": "2025-06-01", "end_date": "2025-06-17"}</td>
+            </tr>
+            <tr>
+                <td>getDataOfTodayByModelNumber</td>
+                <td>http://192.168.1.100:8000/api/get_data_of_today_by_model_number/csv/</td>
+                <td class="payload">{"model_name": "DOST"}</td>
+            </tr>
+            <tr>
+                <td>getDataByDateLimits</td>
+                <td>http://192.168.1.100:8000/api/get_data_by_date_limits/csv/</td>
+                <td class="payload">{"start_date": "2025-06-01", "end_date": "2025-06-17"}</td>
+            </tr>
+            <tr>
+                <td>getAllDataOfToday</td>
+                <td>http://192.168.1.100:8000/api/get_all_data_of_today/csv/</td>
+                <td class="payload">{}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
