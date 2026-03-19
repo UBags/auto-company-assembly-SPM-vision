@@ -15,10 +15,10 @@
       <change afterPath="$PROJECT_DIR$/models/MobileSAM/mobile_sam.egg-info/dependency_links.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/models/MobileSAM/mobile_sam.egg-info/requires.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/models/MobileSAM/mobile_sam.egg-info/top_level.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/camera/CameraProcessorServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/camera/CameraProcessorServer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/camera/RTSPCam.py" beforeDir="false" afterPath="$PROJECT_DIR$/camera/RTSPCam.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/MobileSAM" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/mobilesamv2/automatic_mask_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/mobilesamv2/automatic_mask_generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/mobilesamv2/promt_mobilesamv2/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/mobilesamv2/promt_mobilesamv2/model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/ultralytics/tracker/track.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/ultralytics/tracker/track.py" afterDir="false" />
@@ -37,7 +37,6 @@
       <change beforePath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/ultralytics/yolo/engine/predictor.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/ultralytics/yolo/engine/predictor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/ultralytics/yolo/nas/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/ultralytics/yolo/nas/model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/ultralytics/yolo/utils/callbacks/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/ultralytics/yolo/utils/callbacks/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistence/PostgresBackupUtility.py" beforeDir="false" afterPath="$PROJECT_DIR$/persistence/PostgresBackupUtility.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

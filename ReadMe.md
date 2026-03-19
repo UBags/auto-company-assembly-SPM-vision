@@ -1,6 +1,6 @@
 # CosTheta — Automated Hub Assembly Inspection System
 
-> A real-time, computer-vision-driven quality control platform for automotive steering knuckle and hub assembly lines, developed by **CosTheta Technologies**.
+> A real-time, computer-vision-driven quality control platform for automotive front-axle knuckle and hub assembly lines, developed by **CosTheta Technologies**.
 
 ---
 
@@ -9,7 +9,7 @@
 - [Overview](#overview)
 - [Key Capabilities](#key-capabilities)
 - [System Architecture](#system-architecture)
-- [Process Architecture — Six Parallel Processes](#process-architecture--six-parallel-processes)
+- [Process Architecture — Eight Parallel Processes](#process-architecture--Eight-parallel-processes)
 - [Inter-Process Communication — Redis Message Bus](#inter-process-communication--redis-message-bus)
 - [Inspection Pipeline & State Machine](#inspection-pipeline--state-machine)
 - [Camera Vision Pipeline](#camera-vision-pipeline)
@@ -104,7 +104,7 @@ graph TB
 
 ---
 
-## Process Architecture — Six Parallel Processes
+## Process Architecture — Eight Parallel Processes
 
 ```mermaid
 graph LR
