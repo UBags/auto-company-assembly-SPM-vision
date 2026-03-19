@@ -1,6 +1,6 @@
 # CosTheta — Automated Hub Assembly Inspection System
 
-> A real-time, computer-vision-driven quality control platform for automotive front-axle knuckle and hub assembly lines, developed by **CosTheta Technologies**.
+> A real-time, computer-vision-driven quality control platform for automotive front-axle knuckle and hub assembly lines. Nearly 75,000 lines of python code (including comments and test scripts), developed by **CosTheta Technologies**.
 
 ---
 

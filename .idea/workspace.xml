@@ -5,38 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f80b22c5-a80d-4091-ab5a-b6e0a70fa1b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAM" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/weight/ObjectAwareModel.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/weight/l2.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/weight/mobile_sam.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/weight/sam_vit_h.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/MobileSAM/mobile_sam.egg-info/PKG-INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/MobileSAM/mobile_sam.egg-info/SOURCES.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/MobileSAM/mobile_sam.egg-info/dependency_links.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/MobileSAM/mobile_sam.egg-info/requires.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/MobileSAM/mobile_sam.egg-info/top_level.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/MobileSAM" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/mobilesamv2/automatic_mask_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/mobilesamv2/automatic_mask_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/mobilesamv2/promt_mobilesamv2/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/mobilesamv2/promt_mobilesamv2/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/ultralytics/tracker/track.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/ultralytics/tracker/track.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/ultralytics/vit/rtdetr/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/ultralytics/vit/rtdetr/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/ultralytics/vit/sam/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/ultralytics/vit/sam/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/ultralytics/yolo/engine/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/ultralytics/yolo/engine/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/ultralytics/yolo/engine/predictor.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/ultralytics/yolo/engine/predictor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/ultralytics/yolo/nas/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/ultralytics/yolo/nas/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/ultralytics/yolo/utils/callbacks/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/ultralytics/yolo/utils/callbacks/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/mobilesamv2/automatic_mask_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/mobilesamv2/automatic_mask_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/mobilesamv2/promt_mobilesamv2/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/mobilesamv2/promt_mobilesamv2/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/ultralytics/tracker/track.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/ultralytics/tracker/track.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/ultralytics/vit/rtdetr/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/ultralytics/vit/rtdetr/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/ultralytics/vit/sam/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/ultralytics/vit/sam/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/ultralytics/yolo/engine/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/ultralytics/yolo/engine/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/ultralytics/yolo/engine/predictor.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/ultralytics/yolo/engine/predictor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/ultralytics/yolo/nas/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/ultralytics/yolo/nas/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/ultralytics/yolo/utils/callbacks/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAMv2/ultralytics/yolo/utils/callbacks/base.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,9 +16,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="3BA9He0oZmajFrleTYUzpdIkVwR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -58,7 +28,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+    "git-widget-placeholder": "main",
+    "settings.editor.selected.configurable": "reference.settings.project.statistic.project.settings"
   }
 }]]></component>
   <component name="RunManager">
