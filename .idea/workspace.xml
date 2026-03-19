@@ -19,7 +19,6 @@
       <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/camera/CameraProcessorServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/camera/CameraProcessorServer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/camera/RTSPCam.py" beforeDir="false" afterPath="$PROJECT_DIR$/camera/RTSPCam.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/MobileSAM" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/mobilesamv2/automatic_mask_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/mobilesamv2/automatic_mask_generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/mobilesamv2/promt_mobilesamv2/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/mobilesamv2/promt_mobilesamv2/model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/ultralytics/tracker/track.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MobileSAM/MobileSAM/MobileSAMv2/ultralytics/tracker/track.py" afterDir="false" />
