@@ -1,5 +1,4 @@
 
-ApplicationConfiguration.properties
 
 *.pyc
 __pycache__/
