@@ -1,0 +1,10 @@
+
+ApplicationConfiguration.properties
+
+*.pyc
+__pycache__/
+.venv/
+.env
+*.log
+*.dist/
+MainProgram.dist/
