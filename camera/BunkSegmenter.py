@@ -1,3 +1,6 @@
+# Copyright (c) 2025 Uddipan Bagchi. All rights reserved.
+# See LICENSE in the project root for license information.package com.costheta.cortexa.action
+
 """
 BunkSegmenter.py v2.0 - UPDATED FOR V0.7 PIPELINE
 Bunk hole detection using MobileSAMv2 segmentation with v0.7 preprocessing pipeline.
