@@ -1,3 +1,6 @@
+# Copyright (c) 2025 Uddipan Bagchi. All rights reserved.
+# See LICENSE in the project root for license information.package com.costheta.cortexa.action
+
 """
 CheckNoCapBunk.py v2.0 - UPDATED FOR V0.7 PIPELINE
 Implements no-cap bunk hole verification using MobileSAMv2 with v0.7 preprocessing.
