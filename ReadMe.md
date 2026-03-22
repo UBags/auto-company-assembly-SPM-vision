@@ -29,7 +29,7 @@
 
 The CosTheta Inspection System automates quality control at each station of a hub-assembly line. A **QR code** on every incoming component uniquely identifies the part (model, LHS/RHS, tonnage); the system then orchestrates a sequence of **camera-based visual inspections**, **PLC-interlocked torque checks**, and **press operations** before generating a pass/fail result that is written back to the PLC and persisted in PostgreSQL.
 
-The platform runs as **six independent OS processes** connected through a **Redis message bus**, with a **PyQt6 GUI frontend** giving operators real-time status, image previews, and audit trails.
+The platform runs as **eight independent OS processes** connected through a **Redis message bus**, with a **PySide6 GUI frontend** giving operators real-time status, image previews, and audit trails.
 
 ---
 
