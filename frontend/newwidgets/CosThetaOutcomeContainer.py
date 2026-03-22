@@ -1,3 +1,6 @@
+# Copyright (c) 2025 Uddipan Bagchi. All rights reserved.
+# See LICENSE in the project root for license information.package com.costheta.cortexa.action
+
 from PySide6 import QtCore
 from PySide6.QtWidgets import QWidget, QLabel, QFrame, QVBoxLayout, QHBoxLayout, QGridLayout, QSpacerItem, QSizePolicy, \
     QApplication, QMainWindow
