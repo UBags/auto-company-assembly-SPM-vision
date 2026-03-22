@@ -1,3 +1,6 @@
+# Copyright (c) 2025 Uddipan Bagchi. All rights reserved.
+# See LICENSE in the project root for license information.package com.costheta.cortexa.action
+
 """
 Logger module providing logging level constants and utility methods.
 Uses IntEnum for type-safe log levels and message types.
