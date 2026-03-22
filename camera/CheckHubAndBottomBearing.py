@@ -1,3 +1,6 @@
+# Copyright (c) 2025 Uddipan Bagchi. All rights reserved.
+# See LICENSE in the project root for license information.package com.costheta.cortexa.action
+
 """
 CheckHubAndBottomBearing.py
 Implements hub and bottom bearing verification using MobileSAMv2 segmentation.
