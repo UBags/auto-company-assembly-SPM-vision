@@ -35,6 +35,9 @@ The CosTheta Inspection System automates quality control at each station of a hu
 
 The platform runs as **eight independent OS processes** connected through a **Redis message bus**, with a **PySide6 GUI frontend** giving operators real-time status, image previews, and audit trails.
 
+<img width="1280" height="860" alt="FrontEnd Picture" src="https://github.com/user-attachments/assets/d128fb58-d7ea-420b-8aa3-13627bc6e139" />
+
+
 ---
 
 ## Key Capabilities
